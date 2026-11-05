@@ -140,7 +140,7 @@ make -C kernel && sudo ./scripts/run_demo.sh
 
 - El cifrado es un **keystream XOR didáctico**, no criptografía de grado
   productivo. En una versión real se usaría la **Crypto API** del kernel
-  (`crypto_aead`, AES-GCM). Ver *Trabajo futuro* en el informe.
+  (`crypto_aead`, AES-GCM).
 - El recifrado al respaldo se realiza en `.close` del VMA (munmap), no en cada
   `msync()` de páginas con *backing* de `address_space`.
 - No sustituye a un LSM completo; es una prueba de concepto de los puntos de
