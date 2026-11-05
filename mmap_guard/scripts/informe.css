@@ -1,0 +1,84 @@
+/* Estilo del informe MMAPGuard — SO2026B */
+:root{
+  --navy:#0b2a4a; --accent:#0e7c7b; --accent2:#1f6feb;
+  --ink:#1a1a1a; --muted:#5b6672; --line:#d9e0e7; --bg-soft:#f4f7fa; --code-bg:#f6f8fa;
+}
+*{ box-sizing:border-box; }
+body{
+  font-family:"DejaVu Serif", Georgia, serif;
+  font-size:10.5pt; line-height:1.5; color:var(--ink);
+  margin:0; padding:0;
+}
+/* ---- Encabezados ---- */
+h1,h2,h3,h4{ font-family:"DejaVu Sans", Arial, sans-serif; line-height:1.25; }
+h1{
+  color:#fff; background:linear-gradient(90deg,var(--navy),var(--accent));
+  font-size:16pt; margin:26px 0 14px; padding:10px 14px; border-radius:6px;
+  page-break-after:avoid;
+}
+h2{
+  color:var(--navy); font-size:13pt; margin:20px 0 8px;
+  padding-bottom:4px; border-bottom:2px solid var(--accent);
+  page-break-after:avoid;
+}
+h3{ color:var(--accent); font-size:11.5pt; margin:14px 0 6px; page-break-after:avoid; }
+h4{ color:var(--muted); font-size:10.5pt; margin:12px 0 4px; }
+p{ margin:7px 0; text-align:justify; }
+a{ color:var(--accent2); text-decoration:none; }
+strong{ color:var(--navy); }
+hr{ border:0; border-top:1px solid var(--line); margin:18px 0; }
+
+/* ---- Bloque de título ---- */
+header#title-block-header{
+  margin:0 0 10px; padding:0 0 14px; border-bottom:3px solid var(--navy);
+}
+h1.title{
+  background:none; color:var(--navy); padding:0; margin:0 0 6px;
+  font-size:19pt; border-radius:0;
+}
+p.author,p.date{ color:var(--muted); font-family:"DejaVu Sans",sans-serif;
+  font-size:10pt; margin:2px 0; text-align:left; }
+
+/* ---- Tabla de contenido ---- */
+nav#TOC{
+  background:var(--bg-soft); border:1px solid var(--line); border-radius:6px;
+  padding:10px 16px; margin:14px 0 8px; font-family:"DejaVu Sans",sans-serif;
+  font-size:9.5pt; page-break-after:always;
+}
+nav#TOC > ul{ list-style:none; padding-left:0; }
+nav#TOC ul ul{ padding-left:16px; }
+nav#TOC a{ color:var(--ink); }
+
+/* ---- Tablas ---- */
+table{
+  border-collapse:collapse; width:100%; margin:12px 0; font-size:9pt;
+  font-family:"DejaVu Sans", Arial, sans-serif; table-layout:fixed;
+  word-wrap:break-word; overflow-wrap:anywhere; page-break-inside:avoid;
+}
+th{ background:var(--navy); color:#fff; text-align:left; padding:6px 8px;
+  border:1px solid var(--navy); font-weight:600; }
+td{ padding:6px 8px; border:1px solid var(--line); vertical-align:top; }
+tr:nth-child(even) td{ background:var(--bg-soft); }
+
+/* ---- Código ---- */
+code{
+  font-family:"DejaVu Sans Mono", monospace; font-size:8.6pt;
+  background:var(--code-bg); color:#9a2c2c; padding:1px 4px; border-radius:3px;
+  overflow-wrap:anywhere;
+}
+pre{
+  background:var(--code-bg); border:1px solid var(--line); border-left:4px solid var(--accent);
+  border-radius:5px; padding:10px 12px; margin:10px 0; overflow-x:auto;
+  page-break-inside:avoid;
+}
+pre code{ background:none; color:var(--ink); padding:0; font-size:8.4pt; line-height:1.4; }
+
+/* ---- Citas ---- */
+blockquote{
+  margin:10px 0; padding:8px 14px; color:var(--muted);
+  background:var(--bg-soft); border-left:4px solid var(--accent2); border-radius:0 5px 5px 0;
+}
+blockquote p{ margin:3px 0; }
+
+ul,ol{ margin:7px 0 7px 4px; padding-left:20px; }
+li{ margin:3px 0; }
